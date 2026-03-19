@@ -528,13 +528,6 @@ jobs:
     needs:
       - test
     steps:
-      - name: Notify Codecov that all coverage reports have been uploaded
-        if: >-
-          !cancelled()
-        uses: codecov/codecov-action@v5
-        with:
-          fail_ci_if_error: true
-          run_command: send-notifications
       - name: Notify Qlty that all coverage reports have been uploaded
         if: >-
           !cancelled()
